@@ -15,17 +15,17 @@ data$Datetime <- as.POSIXct(datetime)
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 with(data, {
   plot(Global_active_power~Datetime, type="l", 
-       ylab="Global Active Power (kilowatts)", xlab="")
+       ylab="Global Active Power (kilowatts)", xlab="", cex.lab=1, cex.axis=1)
   plot(Voltage~Datetime, type="l", 
-       ylab="Voltage (volt)", xlab="")
+       ylab="Voltage (volt)", xlab="", cex.axis=0.75)
   plot(Sub_metering_1~Datetime, type="l", 
-       ylab="Global Active Power (kilowatts)", xlab="")
+       ylab="Global Active Power (kilowatts)", xlab="", cex.lab=1, cex.axis=1)
   lines(Sub_metering_2~Datetime,col='Red')
   lines(Sub_metering_3~Datetime,col='Blue')
   legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n",
-         legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
+         legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),text.font=1,cex=0.48)
   plot(Global_reactive_power~Datetime, type="l", 
-       ylab="Global Rective Power (kilowatts)",xlab="")
+       ylab="Global Rective Power (kilowatts)",xlab="", cex.lab=1, cex.axis=1)
 })
 
 ## Save to file
